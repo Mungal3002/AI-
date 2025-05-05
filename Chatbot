@@ -1,0 +1,27 @@
+def restaurant_chatbot():
+    print("Hello! Welcome to Chatbot.")
+    print("How can I help you today?")
+    
+    while True:
+        user_input = input(" You: ").lower()
+
+        if "reserve" in user_input or "book" in user_input:
+            name = input(" Great! Can I have your name? ")
+            date = input(" What date would you like to book for? (e.g., 2025-05-06) ")
+            time = input(" What time? (e.g., 7:00 PM) ")
+            people = input(" For how many people? ")
+
+            print(f"🤖 Thanks {name}! Your reservation for {people} people on {date} at {time} is confirmed.")
+        
+        elif "menu" in user_input:
+            print("🤖 Here's a brief menu:\n- Pasta\n- Pizza\n- Salad\n- Dessert\n- Beverages")
+        
+        elif "bye" in user_input or "exit" in user_input:
+            print(" Thank you for visiting Chatbot. Have a great day!")
+            break
+
+        else:
+            print(" I'm sorry, I didn't understand that. You can ask to reserve a table, view the menu, or say bye.")
+
+# Run the chatbot
+restaurant_chatbot()
