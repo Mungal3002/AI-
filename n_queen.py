@@ -24,6 +24,8 @@ def solve_nqueens_backtracking(n):
     return solutions
 
 
+from collections import defaultdict
+
 def solve_nqueens_branch_and_bound(n):
     def backtrack(row):
         if row == n:
@@ -38,11 +40,12 @@ def solve_nqueens_branch_and_bound(n):
 
     board = [-1] * n
     cols = [False] * n
-    main_diag = {}
-    sec_diag = {}
+    main_diag = defaultdict(bool)
+    sec_diag = defaultdict(bool)
     solutions = []
     backtrack(0)
     return solutions
+
 
 
 n = 4
