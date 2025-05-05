@@ -11,10 +11,10 @@ def restaurant_chatbot():
             time = input(" What time? (e.g., 7:00 PM) ")
             people = input(" For how many people? ")
 
-            print(f"🤖 Thanks {name}! Your reservation for {people} people on {date} at {time} is confirmed.")
+            print(f" Thanks {name}! Your reservation for {people} people on {date} at {time} is confirmed.")
         
         elif "menu" in user_input:
-            print("🤖 Here's a brief menu:\n- Pasta\n- Pizza\n- Salad\n- Dessert\n- Beverages")
+            print(" Here's a brief menu:\n- Pasta\n- Pizza\n- Salad\n- Dessert\n- Beverages")
         
         elif "bye" in user_input or "exit" in user_input:
             print(" Thank you for visiting Chatbot. Have a great day!")
